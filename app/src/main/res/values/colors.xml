@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="grey">#CCCCCC</color>
+    <color name="dark_grey">#4D4D4D</color>
+    <color name="black">#111111</color>
+    <color name="light_grey">#808080</color>
+    <color name="transparent">#00000000</color>
+    <color name="transperent_white">#80FFFFFF</color>
+
+    //GuidLines Colors
+    <color name="bg_white">#FFFFFF</color>
+    <color name="title_color">#3024AD</color>
+    <color name="body_dark">#4D4D4D</color>
+    <color name="body_light">#B3B3B3</color>
+    <color name="subbody">#F44E66</color>
+    <color name="divider">#CCCCCC</color>
+    <color name="light_divider">#EEEEEE</color>
+    <color name="light_lighter_divider">#FCFCFC</color>
+    <color name="timeline">#E6E6E6</color>
+    <color name="view_divider_color">#BABABA</color>
+    <color name="view_divider_color_2">#DADADA</color>
+    <color name="control_background">#cc4285f4</color>
+    <color name="bar_color">#F0F0F0</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="btn_default_light_normal">#00000000</color>
+    <color name="btn_default_light_pressed">#40ffffff</color>
+    <color name="btn_send_normal">#02c754</color>
+    <color name="btn_send_pressed">#006633</color>
+    <color name="btn_context_menu_normal">#ffffff</color>
+    <color name="btn_context_menu_pressed">#40000000</color>
+
+
+</resources>

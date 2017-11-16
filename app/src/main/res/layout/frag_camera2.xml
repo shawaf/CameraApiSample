@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.sdotmedia.sniffr.camera.views.RevealBackgroundView
+        android:id="@+id/vRevealBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/vUpperPanel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d60"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp">
+
+
+            <ImageButton
+                android:id="@+id/cam_close_btn"
+                android:layout_width="@dimen/d48"
+                android:layout_height="@dimen/d48"
+                android:background="@drawable/btn_default_light"
+                android:src="@mipmap/ic_close_white_24dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:layout_width="@dimen/d48"
+                android:layout_height="@dimen/d48"
+                android:layout_marginLeft="24dp"
+                android:background="@drawable/btn_default_light"
+                android:src="@mipmap/ic_camera_rear_white_24dp" />
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/vPhotoRoot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/vLowerPanel"
+            android:layout_below="@+id/vUpperPanel"
+            android:layout_centerInParent="true">
+
+            <ImageButton
+                android:id="@+id/ivTakenPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/vShutter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:visibility="gone" />
+
+            <com.sdotmedia.sniffr.camera.views.AutoFitTextureView
+                android:id="@+id/texture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+
+                />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/vLowerPanel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d120"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/pic_lib_btn"
+                    android:layout_width="@dimen/d48"
+                    android:layout_height="@dimen/d48"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_capture_options"
+                    android:src="@mipmap/ic_collections_white_24dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/capture_btn"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_capture" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/cam_switch_btn"
+                    android:layout_width="@dimen/d48"
+                    android:layout_height="@dimen/d48"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_capture_options"
+                    android:src="@mipmap/ic_camera_alt_white_24dp" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

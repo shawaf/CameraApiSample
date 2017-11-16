@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.sdotmedia.sniffr.camera.views.RevealBackgroundView
+        android:id="@+id/photo_vRevealBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/photo_vUpperPanel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d60"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/d8"
+            android:paddingRight="@dimen/d8">
+
+
+            <ImageButton
+                android:id="@+id/photo_back_btn"
+                android:layout_width="@dimen/d48"
+                android:layout_height="@dimen/d48"
+                android:background="@drawable/btn_default_light"
+                android:src="@mipmap/ic_arrow_back_white_24dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+
+            <Button
+                android:id="@+id/photo_upload_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/d48"
+                android:background="@drawable/btn_default_light"
+                android:text="Upload"
+                android:textColor="@color/bg_white"
+                android:textSize="@dimen/fontSizeMedium" />
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/pic_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/photo_vLowerPanel"
+            android:layout_below="@+id/photo_vUpperPanel"
+            android:layout_centerInParent="true">
+
+
+            <ImageView
+                android:id="@+id/takenphoto_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
+                android:src="@mipmap/edit_photo_image_placeholder" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/video_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/photo_vLowerPanel"
+            android:layout_below="@+id/photo_vUpperPanel"
+            android:layout_centerInParent="true">
+
+
+            <com.devbrackets.android.exomedia.ui.widget.EMVideoView
+                android:id="@+id/takenvideo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/play_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/play_btn"
+                    android:layout_width="@dimen/d50"
+                    android:layout_height="@dimen/d50"
+                    android:background="@color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@android:drawable/ic_media_play" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/photo_vLowerPanel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d80"
+            android:layout_alignParentBottom="true">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/photo_Filters_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

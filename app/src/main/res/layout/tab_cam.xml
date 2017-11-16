@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/d40"
+    android:layout_height="@dimen/d40"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/d24"
+        android:layout_height="@dimen/d24"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:focusableInTouchMode="false"
+        android:src="@mipmap/camera_icon" />
+</LinearLayout>

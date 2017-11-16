@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.devbrackets.android.exomedia.ui.widget.EMVideoView
+        android:id="@+id/takenvideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/black"
+        android:gravity="top|center_horizontal"
+        android:layout_marginBottom="@dimen/d40"
+        android:paddingTop="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/center_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/photo_vUpperPanel"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/pic_lay"
+                layout="@layout/imageview_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/video_lay"
+                layout="@layout/videoview_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/photo_vLowerPanel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <FrameLayout
+                android:id="@+id/confirm_btn_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/d70"
+                    android:layout_height="@dimen/d70"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/complet_check_bg" />
+
+                <ImageButton
+                    android:layout_width="@dimen/d40"
+                    android:layout_height="@dimen/d40"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/check_white" />
+
+            </FrameLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
